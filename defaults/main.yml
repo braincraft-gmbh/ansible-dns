@@ -1,0 +1,3 @@
+---
+domain: local
+dns_interface: eth0

@@ -1,0 +1,21 @@
+---
+- name: Install dnsmasq
+  package:
+    name: dnsmasq
+    state: present
+  tags:
+    - dns
+
+- name: Setup dnsmasq.conf from template
+  template:
+    src: dnsmasq.conf
+    dest: /etc/dnsmasq.conf
+  notify: restart dnsmasq
+
+- name: Generate /etc/hosts with all hosts from inventory
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+  tags:
+    - hosts
+  notify: reload dnsmasq

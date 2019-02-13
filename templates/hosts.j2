@@ -1,0 +1,10 @@
+###################################################
+# THIS FILE IS GENERATED VIA ANSIBLE TEMPLATE     #
+# ANY LOCAL CHANGES WILL BE LOST ON THE NEXT RUN! #
+###################################################
+
+127.0.0.1	localhost
+
+{% for h in groups['all']|sort %}
+{{ hostvars[h].ansible_default_ipv4.address|default(hostvars[h].ansible_all_ipv4_addresses[0]) }}	{{ hostvars[h].inventory_hostname }} {{ hostvars[h].inventory_hostname }}.{{ domain }}
+{% endfor %}
