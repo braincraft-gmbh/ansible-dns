@@ -6,5 +6,5 @@
 127.0.0.1	localhost
 
 {% for h in groups['all']|sort %}
-{{ hostvars[h].vars['ansible_' + dns_interface].ipv4.address }}	{{ hostvars[h].inventory_hostname }} {{ hostvars[h].inventory_hostname }}.{{ domain }}
+{{ hostvars[h].ansible_default_ipv4.address }}	{{ hostvars[h].inventory_hostname }} {{ hostvars[h].inventory_hostname }}.{{ domain }}
 {% endfor %}
