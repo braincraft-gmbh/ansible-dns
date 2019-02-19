@@ -1,7 +1,8 @@
 galaxy_info:
-  author: Gualter Barbas Baptista
-  description: your description
-  company: your company (optional)
+  role_name: dns
+  author: Gualter Barbas Baptista (gandhiano)
+  description: Provide DNS using dnsmasq and dynamically populate it from inventory
+  company: Braincraft GmbH
   license: GPLv3
 
   min_ansible_version: 2.4
@@ -19,6 +20,8 @@ galaxy_info:
 
   galaxy_tags:
     - dns
+    - dnsmasq
+    - nameserver
     - hosts
     - discovery
 
