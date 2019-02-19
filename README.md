@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-The IP addresses will be read from the `ansible_default_ipv4.address` variable, which points to the IP under the default route. These addresses will be present in the hosts file together with the inventory hostname and their FQDN (appended `ansible_hostname` appended by with the `domain` variable).
+The IP addresses will be read from the `ansible_default_ipv4.address` variable, which points to the IP under the default route. These addresses will be present in the hosts file together with the inventory hostname and their FQDN (`ansible_hostname` appended with the `domain` variable).
 
 Following defaults are present:
 
